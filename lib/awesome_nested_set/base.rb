@@ -255,11 +255,17 @@ module CollectiveIdea #:nodoc:
           end
 
           def quoted_left_column_name
-            connection.quote_column_name(left_column_name)
+            # breaks
+            #connection.quote_column_name(left_column_name)
+            # quickfix
+            left_column_name
           end
 
           def quoted_right_column_name
-            connection.quote_column_name(right_column_name)
+            # breaks
+            #connection.quote_column_name(right_column_name)
+            # quickfix
+            right_column_name
           end
 
           def quoted_parent_column_name
